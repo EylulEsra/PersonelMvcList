@@ -1,0 +1,14 @@
+﻿<form method="post">
+    <label>
+        Adı Soyadı:
+        <input name ="adsoyad" value="@ViewBag.adsoyad" />
+    </label>
+
+    <label for="dtDogum">Doğum Tarihi</label>
+    <input name="adsoyad" id="dtDogum" type="date" value="@ViewBag.Dogum?.ToString("yyyy-MM-dd")" />
+    <br />
+
+    <input type="button" value="Kaydet" />
+    <input type="submit" value="Kaydet" />
+    <button>Kaydet</button>
+</form>

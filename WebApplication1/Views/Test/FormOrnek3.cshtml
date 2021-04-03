@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Personel
+<!--viewe gönderdiğimiz nesneye sayfa içerisinde model ile erişiyoruz p nin türünü yukarıya tanıtman lazım oda yukarıdaki gibi oluyor sonrada modeli, bir personel listesiymiş gibi kullanabiliyorum --->
+<style>
+    label, input {
+        display: block;
+    }
+</style>
+<form method="post" action="/test/formornek3">
+    <label>
+        Adı Soyadı:
+        <input required maxlength="60" name="adsoyad" value="@Model?.Adsoyad" />
+    </label>
+
+    <label>
+
+
+        Doğum tarihi:
+        <input min="@DateTime.Now-new TimeSpan(18*365,0,0,0,0)).ToString("yyyy-MM-dd"))"
+               min ="1900-01-01"
+               name="dogum"  type="date" value="@Model?.Dogum.ToString("yyyy-MM-dd")" />
+    </label>
+    <br />
+
+    
+    <input type="submit" value="Kaydet" />
+    
+</form>
+
